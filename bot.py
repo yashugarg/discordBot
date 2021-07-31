@@ -132,3 +132,77 @@ async def clear(ctx, amount: int):
 async def clear_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         await ctx.send('Please specify an amount of messages to delete.')
+
+
+@client.command()
+# @commands.check(is_it_me)
+async def user(ctx):
+    '''
+    - Returns the username.
+    '''
+    await ctx.send(f'Hi! I am {ctx.author}')
+
+
+@client.command()
+async def kick(ctx, member: discord.Member, *, reason=None):
+    '''
+    - Kick members from the server.
+    '''
+    await member.kick(reason=reason)
+    await ctx.send(f'Kicked {member.mention}')
+
+
+@client.command()
+async def ban(ctx, member: discord.Member, *, reason=None):
+    '''
+    - Ban members from the server.
+    '''
+    await member.ban(reason=reason)
+    await ctx.send(f'Banned {member.mention}')
+
+
+@client.command()
+async def unban(ctx, *, member):
+    '''
+    - Unban banned members from the server.
+    '''
+    banned_users = await ctx.guild.bans()
+    member_name, member_discriminator = member.split('#')
+
+    for ban_entry in banned_users:
+        user = ban_entry.user
+
+        if (user.name, user.discriminator) == (member_name, member_discriminator):
+            await ctx.guild.unban(user)
+
+            await ctx.send(f'Unbanned {user.name}#{user.discriminator}')
+            # same as ctx.send(f'Banned {user.mention}')
+            return
+
+
+@client.command()
+async def load(ctx, extension):
+    '''
+    - Load the mentioned cogs file.
+    '''
+    client.load_extension(f'cogs.{extension}')
+    await ctx.send(f'{extension} Loaded')
+
+
+@client.command()
+async def unload(ctx, extension):
+    '''
+    - Unload the mentioned cogs file.
+    '''
+    client.unload_extension(f'cogs.{extension}')
+    await ctx.send(f'{extension} Unloaded')
+
+
+@client.command()
+async def reload(ctx, extension):
+    '''
+    - Reload the mentioned cogs file.
+    '''
+    client.unload_extension(f'cogs.{extension}')
+    client.load_extension(f'cogs.{extension}')
+    await ctx.send(f'{extension} Reloaded')

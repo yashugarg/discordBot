@@ -9,9 +9,9 @@ class Test(commands.Cog):
     @commands.command(aliases=['hi', 'Hello', 'hello', 'Hey', 'hey'])
     async def Hi(self, ctx):
         '''
-        - Secret says Hi.
+        - Selfie-ish says Hi.
         '''
-        await ctx.send('Secret says Hi! :smile_cat:')
+        await ctx.send('Selfie-ish says Hi! :smile_cat:')
 
 
 def setup(client):

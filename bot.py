@@ -643,4 +643,4 @@ async def request_points(ctx):
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
 
-client.run("ODcxMjkzNjExNTk2MjA2MTAx.YQZNaA.qJUHL4gk37_egdxZGWLLZh8rM0I")
+client.run("")

@@ -18,3 +18,61 @@ By working on this project, we enhanced our knowledge of Python and its various 
 
 ## What's next for Selfie-ish Discord Bot
 We will further work on the bot and include even more features. For future prospects, we aim to develop a blog website for Selfie-ish wherein we will mention all its commands and functionalities, along with its Discord invite link. Later on, we will deploy our bot on a 24-hour active server for users to enjoy it anytime they desire.
+
+## Features 
+### Test Functions 👀
+Feature | Command
+-------- | --------
+**Selfie-ish says "Hi"** | \*Hi
+**Replies "Boop"** | \*Beep
+**Returns the username** | \*user
+**Return the bot's response time** | \*ping
+
+### 8 Ball Trivia 🎱
+Feature | Command
+-------- | --------
+**Magic 8Ball Trivia** | \*8ball \<_write your question here_>
+  
+### AI Chat Bot 💬
+Feature | Command
+-------- | --------
+**AI Chat Bot** | \*ask \<_write your question here_>
+  
+### Admin Rights 🚔
+Feature | Command
+-------- | --------
+**Ban members from the server** | \*ban \@\<_tag the member_>
+**Delete specified number of messages** | \*clear\<_add the number of messages_>
+**Kick members from the server** | \*kick\@\<_tag the member_>
+**Unban banned members from the server** | \*unban @<_tag the member_>
+
+### Wikipedia Search 🔍
+  Feature | Command
+-------- | --------
+**Wikipedia search** | \*define\<_enter the keyword_>
+
+### Music Player 🎵
+Feature | Command
+-------- | --------
+**Joins the Voice Channel** | \*join
+**Disconnect from the voice channel** | \*leave
+**Pause the playing audio** | \*pause
+**Play YouTube audio** | \*play\<_YouTube URL_>
+**Resume the paused audio** | \*resume
+**Stop the playing audio** | \*stop
+
+### Token Rank Feature :chart_with_upwards_trend:
+Feature | Command
+-------- | --------
+**Displays the score and rank based on points system** | \*leaderboard
+**Add points** | \*points add @<_tag the member_> <_points to be added_>
+**Remove points** | \*points remove @<_tag the member_> <_points to be removed_>
+**Reset the points database** | \*reset
+
+### Developer Functions :busts_in_silhouette:
+Feature | Command
+-------- | --------
+**Load the mentioned cogs file** | \*load<_name of the cogs file_>
+**Reaload the mentioned cogs file** | \*reload<_name of the cogs file_>
+**Unload the mentioned cogs file** | \*unload<_name of the cogs file_>
+

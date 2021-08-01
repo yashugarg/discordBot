@@ -643,4 +643,5 @@ async def request_points(ctx):
 async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
 
+#Insert Discord Developer Bot Token Here    
 client.run("")
